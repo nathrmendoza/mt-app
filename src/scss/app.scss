@@ -1,0 +1,17 @@
+//core stuff
+@import './core/reset.scss';
+@import './core/fonts.scss';
+@import './core/typography.scss';
+
+//globals
+@import './global/variables.scss';
+@import './global/global.scss';
+
+//components
+@import './components/Buttons.scss';
+@import './components/Header.scss';
+
+//page specifics
+@import './components/startup/all.scss';
+
+//overrides

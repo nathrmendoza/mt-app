@@ -1,0 +1,28 @@
+
+//heading
+h1 {
+    font: 700 67px/88px $fontmain;
+}
+h2 {
+    font: 700 51px/66px $fontmain;
+}
+h3 {
+    font: 700 38px/49px $fontmain;
+}
+h4 {
+    font: 700 28px/37px $fontmain;
+}
+h5 {
+    font: 700 21px/28px $fontmain;
+}
+h6 {
+    font: 700 16px/21px $fontmain;
+}
+
+p,label,li,button {
+    font: 400 16px/21px $fontmain;
+}
+a {
+    font: inherit;
+    color: inherit;
+}
