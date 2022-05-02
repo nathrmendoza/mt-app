@@ -1,0 +1,23 @@
+
+.username__panel {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    .pagewrapper {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    h1 {
+        margin-bottom: 16px;
+    }
+    p {
+        margin-bottom: 36px;
+    }
+    .input-primary {
+        margin-bottom: 40px;
+        text-align: center;
+    }
+}

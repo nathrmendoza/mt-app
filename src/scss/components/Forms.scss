@@ -1,0 +1,22 @@
+
+.input-primary {
+    display: inline-block;
+    border: 2px solid $bgray;
+    padding: 9px 34px;
+    font: 700 16px/19px $fontmain;
+    position: relative;
+    border-radius: 30px;
+    transition: border-color 0.2s ease-in-out;
+    outline: none;
+    max-width: 100%;
+    width: 278px;
+    &:focus, &:active {
+        border-color: $blue;
+    }
+}
+
+.input-lg {
+    font-size: 24px;
+    line-height: 29px;
+    width: 393px;
+}

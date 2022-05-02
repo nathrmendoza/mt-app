@@ -1,7 +1,8 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 
-const ButtonPrimary = ({type, url, extraclass, children, clickFunc}) => {
+const ButtonPrimary = ({type, disable, url, extraclass, children, clickFunc}) => {
+    console.log(disable);
   //if type is link, URL is required or it will break
     if (type === 'link') {
         return (
@@ -13,7 +14,7 @@ const ButtonPrimary = ({type, url, extraclass, children, clickFunc}) => {
     }
     else {
         return (
-            <button type={type} className={'btn-primary ' + extraclass} onClick={clickFunc}>
+            <button type={type} disabled={disable} className={'btn-primary ' + extraclass} onClick={clickFunc}>
                 <div className='btn-actual'>{children}</div>
                 <div className='btn-under'></div>
             </button>
