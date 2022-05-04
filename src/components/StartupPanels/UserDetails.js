@@ -1,8 +1,7 @@
 import React, { useEffect, useState, useRef } from 'react'
-import { AnimatePresence, motion } from 'framer-motion'
 import ButtonPrimary from '../Button'
 
-const UserDetails = ({isVisible, onChangeFunc, userName, selectVal, incomeVal, allotments, allotAddFunc, allotRemFunc}) => {
+const UserDetails = ({isVisible, onChangeFunc, userName, selectVal, incomeVal, allotments, allotAddFunc, allotRemFunc, backFunc}) => {
   
   const [formHeight, setFormHeight] = useState('');
   
@@ -16,14 +15,7 @@ const UserDetails = ({isVisible, onChangeFunc, userName, selectVal, incomeVal, a
   }, [topText?.current?.clientHeight]);
 
   return (
-    <AnimatePresence>
-      {isVisible && (
-    <motion.section
-      key="panel"
-      initial={{opacity: 0 }}
-      animate={{opacity: 1}}
-      exit={{opacity: 0}}
-      className='userdetails__panel'>
+    <section className='userdetails__panel'>
       <div className='pagewrapper' ref={formWrap}>
         <div className='top-text' ref={topText}>
           <h1>Hi, {userName}!</h1>
@@ -52,14 +44,13 @@ const UserDetails = ({isVisible, onChangeFunc, userName, selectVal, incomeVal, a
               )}
             </div>
             <div className='buttons-wrapper'>
+              <ButtonPrimary type="button" clickFunc={backFunc}>Back</ButtonPrimary>
               <ButtonPrimary type="button" disable={allotments.length === 0} clickFunc={() => {console.log('submit')}}>Submit</ButtonPrimary>
             </div>
           </div>
         </div>
       </div>
-    </motion.section>
-      )}
-    </AnimatePresence>
+    </section>
   )
 }
 
